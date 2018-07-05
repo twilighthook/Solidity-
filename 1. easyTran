@@ -8,7 +8,7 @@ contract transaction{
         
         require(msg.sender.balance >= msg.value);
         
-        emit sendEvent(msg.sender , destination , msg.value);
+        sendEvent(msg.sender , destination , msg.value);
         
         destination.send(msg.value);
         
